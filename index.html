@@ -22,7 +22,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   html, body { height: 100%; }
   body {
-    background: radial-gradient(ellipse at 50% 20%, var(--night-2), var(--night) 70%);
+    background: radial-gradient(ellipse at 50% 20%, #ff9fbd, #c2185b 85%);
     color: var(--paper);
     font-family: var(--serif);
     overflow-x: hidden;
@@ -42,7 +42,16 @@
   .screen, .modal { position: relative; z-index: 1; }
 
   /* intro */
-  .intro h1 { font-family: var(--script); font-weight: 400; font-size: clamp(54px, 17vw, 96px); line-height: 1.05; color: var(--rose); }
+  .intro h1 {
+  font-family: var(--script);
+  font-weight: 400;
+  font-size: clamp(54px, 17vw, 96px);
+  line-height: 1.05;
+  color: var(--rose);
+  text-shadow:
+    2px 2px 0 rgba(36, 16, 47, 0.55),
+    0 4px 12px rgba(36, 16, 47, 0.35);
+}
   .intro p { font-size: 21px; font-style: italic; margin: 18px 0 40px; color: var(--paper); opacity: .85; }
   .seal-btn { width: 96px; height: 96px; border-radius: 50%; border: none; cursor: pointer; background: radial-gradient(circle at 35% 30%, #d9405f, var(--wax) 60%, #7d1229); box-shadow: 0 6px 22px rgba(0,0,0,.45), inset 0 -4px 8px rgba(0,0,0,.25); display: grid; place-items: center; animation: beat 1.6s ease-in-out infinite; }
   .seal-btn svg { width: 42px; height: 42px; fill: #ffd9e0; }
@@ -60,7 +69,16 @@
   @keyframes envIn { from { opacity: 0; transform: translateY(40px) rotate(calc(var(--i) * 2deg - 4deg)) scale(.9); } to { opacity: 1; transform: none; } }
 
   /* envelopes */
-  .pick h2 { font-family: var(--script); font-weight: 400; font-size: 44px; color: var(--rose); margin-bottom: 6px; }
+  .pick h2 {
+  font-family: var(--script);
+  font-weight: 400;
+  font-size: 44px;
+  color: var(--rose);
+  margin-bottom: 6px;
+  text-shadow:
+    2px 2px 0 rgba(36, 16, 47, 0.55),
+    0 4px 10px rgba(36, 16, 47, 0.35);
+}
   .pick .sub { font-style: italic; font-size: 19px; opacity: .8; margin-bottom: 26px; }
   .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 16px; width: 100%; max-width: 420px; }
   .grid .env:last-child { grid-column: 1 / -1; width: calc(50% - 8px); justify-self: center; }
