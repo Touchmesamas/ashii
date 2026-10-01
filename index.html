@@ -279,13 +279,13 @@ function openEnvelope(i, btn) {
   const ph = $('ph');
   ph.innerHTML = '';
   const img = new Image();
-  img.alt = e.caption;
+  img.alt = e.label;
   img.onload = () => { ph.innerHTML = ''; ph.appendChild(img); };
-  img.onerror = () => { ph.innerHTML = `<span>${e.caption}</span>`; };
+  img.onerror = () => { ph.innerHTML = `<span>${e.label}</span>`; };
   img.src = e.photo;
-  ph.innerHTML = `<span>${e.caption}</span>`;
+  ph.innerHTML = `<span>${e.label}</span>`;
 
-  $('cap').textContent = e.caption;
+  $('cap').textContent = e.label;
   $('songName').textContent = e.songTitle;
   const box = $('letterText');
   box.innerHTML = '';
